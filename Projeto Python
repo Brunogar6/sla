@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+data = pd.read_csv("a5_ENERGIA.csv", header= 0, nrows= 30)
+
+plt.plot(data.Ano, data.Energia)
+
+plt.grid(b=True, which='major', color='#666666', linestyle='-')
+
+plt.xticks(rotation=90)
+
+plt.title("Valores mensais do consumo de energia elétrica no estado do Espírito Santo")
+plt.xlabel("Ano")
+plt.ylabel("Energia")
+
+plt.show()
